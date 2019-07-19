@@ -1,20 +1,16 @@
 const express = require('express');
 const app = express();
+app.use(express.static('open'));
 
 app.set('view engine', 'pug');
 app.set('views','./views');
 
-app.use('/store', function(req, res, next){
-    console.log('Jestem pośrednikiem przy żądaniu do /store!');
-   next();
+app.get('/', function(req, res){
+    res.render('dynamic');
 });
 
-app.get('/', function (req, res) {
-    res.send('Hello world!');
-});
-
-app.get('/store', function(req, res) {
-    res.send('To jest sklep');
+app.get('/auth/google', function(req, res){
+    res.render('basic');
 });
 
 app.listen(3000);
