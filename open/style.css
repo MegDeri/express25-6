@@ -17,14 +17,20 @@ body {
 	padding: 80px 40px;
 	border: 1px solid #010101;
 	border-radius: 5px;
+	background: rgb(180, 169, 169);
 }
 
 .greet {
-	font-size: 20px;
-	color: #da4d4d;
+	font-size: 26px;
+	color: #d48b1c;
 }
 
 .logout {
 	text-decoration: none;
 	color: #000;
+}
+
+.btn {
+	background: #d48b1c;
+	border: none;
 }
